@@ -27,11 +27,9 @@ const Home = () => {
       <Navbar />
       <Hero />
       <SectionTitle
-        pretitle="Nextly Benefits"
-        title=" Why should you use this landing page">
-        Nextly is a free landing page & marketing website template for startups
-        and indie projects. Its built with Next.js & TailwindCSS. And its
-        completely open-source.
+        pretitle="Vrei sa inveti ceva nou?"
+        title=" Te asteptam">
+          Evenimentul se adresează atât persoanelor non-tehnice (dar curioase) cât și celor care vor să aprofundeze un anumit domeniu.
       </SectionTitle>
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />

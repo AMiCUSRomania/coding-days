@@ -27,7 +27,7 @@ const Video = () => {
           )}
           {playVideo && (
             <iframe
-              src="https://www.youtube-nocookie.com/embed/aOq49euWnIo?controls=0&autoplay=1"
+              src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FAmicusCodingDays%2Fvideos%2F2209184519401503%2F&show_text=false&width=560&t=0"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
