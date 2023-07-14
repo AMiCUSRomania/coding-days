@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import { Disclosure, Transition } from "@headlessui/react";
+// const SENDGRID_API_KEY = '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';
+const WEB3_API_KEY = 'af782e04-09c1-40bd-80f4-98394250f984';
 
 const PopupWidget = () => {
   const {
@@ -16,16 +18,25 @@ const PopupWidget = () => {
   const [Message, setMessage] = useState("");
 
   const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
+/*  sendgridEmail.setApiKey(SENDGRID_API_KEY);
+  const msg = {
+    to: 'test@example.com',
+    from: 'test@example.com', // Use the email address or domain you verified above
+    subject: 'Sending with Twilio SendGrid is Fun',
+    text: 'and easy to do anywhere, even with Node.js',
+    html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+  };*/
 
   const onSubmit = async (data, e) => {
+    const finalData = {...data, apikey: WEB3_API_KEY};
     console.log(data);
     await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
+        Accept: "application/json"
       },
-      body: JSON.stringify(data, null, 2),
+      body: JSON.stringify(finalData, null, 2),
     })
       .then(async (response) => {
         let json = await response.json();
@@ -106,9 +117,9 @@ const PopupWidget = () => {
               leaveTo="opacity-0 translate-y-5">
               <Disclosure.Panel className=" flex flex-col  overflow-hidden left-0 h-full w-full sm:w-[350px] min-h-[250px] sm:h-[600px] border border-gray-300 dark:border-gray-800 bg-white shadow-2xl rounded-md sm:max-h-[calc(100vh-120px)]">
                 <div className="flex flex-col items-center justify-center h-32 p-5 bg-rose-700">
-                  <h3 className="text-lg text-white">How can we help?</h3>
+                  <h3 className="text-lg text-white">Cum te putem ajuta?</h3>
                   <p className="text-white opacity-50">
-                    We usually respond in a few hours
+                    De obicei raspundem in cateva ore
                   </p>
                 </div>
                 <div className="flex-grow h-full p-6 overflow-auto bg-gray-50 ">
@@ -116,17 +127,12 @@ const PopupWidget = () => {
                     <form onSubmit={handleSubmit(onSubmit)} noValidate>
                       <input
                         type="hidden"
-                        value="YOUR_ACCESS_KEY_HERE"
-                        {...register("apikey")}
-                      />
-                      <input
-                        type="hidden"
-                        value={`${userName} sent a message from Nextly`}
+                        value={`${userName} a trimis un mesaj de la AMiCUS Coding Days`}
                         {...register("subject")}
                       />
                       <input
                         type="hidden"
-                        value="Nextly Template"
+                        value="AMiCUS Coding Days site"
                         {...register("from_name")}
                       />
                       <input
@@ -139,14 +145,14 @@ const PopupWidget = () => {
                         <label
                           htmlFor="full_name"
                           className="block mb-2 text-sm text-gray-600 dark:text-gray-400">
-                          Full Name
+                          Nume intreg
                         </label>
                         <input
                           type="text"
                           id="full_name"
-                          placeholder="John Doe"
+                          placeholder="Ghita Ion"
                           {...register("name", {
-                            required: "Full name is required",
+                            required: "Numele intreg este necesar!",
                             maxLength: 80,
                           })}
                           className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
@@ -166,16 +172,16 @@ const PopupWidget = () => {
                         <label
                           htmlFor="email"
                           className="block mb-2 text-sm text-gray-600 dark:text-gray-400">
-                          Email Address
+                          Email
                         </label>
                         <input
                           type="email"
                           id="email"
                           {...register("email", {
-                            required: "Enter your email",
+                            required: "Introdu emailul",
                             pattern: {
                               value: /^\S+@\S+$/i,
-                              message: "Please enter a valid email",
+                              message: "Te rog introdu un email valid",
                             },
                           })}
                           placeholder="you@company.com"
@@ -197,16 +203,16 @@ const PopupWidget = () => {
                         <label
                           htmlFor="message"
                           className="block mb-2 text-sm text-gray-600 dark:text-gray-400">
-                          Your Message
+                          Mesajul tau
                         </label>
 
                         <textarea
                           rows="4"
                           id="message"
                           {...register("message", {
-                            required: "Enter your Message",
+                            required: "Introdu mesajul tau",
                           })}
-                          placeholder="Your Message"
+                          placeholder="Mesajul tau"
                           className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md h-28 focus:outline-none focus:ring   ${
                             errors.message
                               ? "border-red-600 focus:border-red-600 ring-red-100"
@@ -242,7 +248,7 @@ const PopupWidget = () => {
                                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                             </svg>
                           ) : (
-                            "Send Message"
+                            "Trimite Mesajul"
                           )}
                         </button>
                       </div>

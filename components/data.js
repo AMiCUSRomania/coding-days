@@ -17,17 +17,17 @@ const benefitOne = {
   bullets: [
     {
       title: "Vei cunoaste oameni faini",
-      desc: "Then explain the first point breifly in one or two lines.",
+      desc: "Cei mai...",
       icon: <FaceSmileIcon />,
     },
     {
       title: "Tehnologii noi",
-      desc: "Here you can add the next benefit point.",
+      desc: "Cele mai...",
       icon: <ChartBarSquareIcon />,
     },
     {
       title: "Seminarii interesante",
-      desc: "This will be your last bullet point in this section.",
+      desc: "Nu ai mai auzit asa ceva",
       icon: <CursorArrowRaysIcon />,
     },
   ],

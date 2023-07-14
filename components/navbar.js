@@ -65,7 +65,7 @@ const Navbar = () => {
                           {item}
                       </Link>
                     ))}
-                    <Link href="/" className="w-full px-6 py-2 mt-3 text-center text-white bg-rose-700 rounded-md lg:ml-5">         
+                    <Link href="https://amicus.ro/code/inscriere" className="w-full px-6 py-2 mt-3 text-center text-white bg-rose-700 rounded-md lg:ml-5">
                         Inscrie-te
                     </Link>
                   </>
@@ -89,7 +89,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
-          <Link href="/" className="px-6 py-2 text-white bg-rose-700 rounded-md md:ml-5">
+          <Link href="https://amicus.ro/code/inscriere" className="px-6 py-2 text-white bg-rose-700 rounded-md md:ml-5">
               Inscrie-te
           </Link>
 
