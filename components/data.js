@@ -7,26 +7,26 @@ import {
   SunIcon,
 } from "@heroicons/react/24/solid";
 
-import benefitOneImg from "../public/img/benefit-one.png";
-import benefitTwoImg from "../public/img/benefit-two.png";
+import benefitOneImg from "../public/img/WorkshopCodingDays.jpg";
+import benefitTwoImg from "../public/img/tshirt.jpg";
 
 const benefitOne = {
   title: "Ce beneficii ai daca vii",
-  desc: "You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.",
+  desc: "Cateva zile pentru a trece la urmatorul nivel de dezvoltare",
   image: benefitOneImg,
   bullets: [
     {
-      title: "Understand your customers",
+      title: "Vei cunoaste oameni faini",
       desc: "Then explain the first point breifly in one or two lines.",
       icon: <FaceSmileIcon />,
     },
     {
-      title: "Improve acquisition",
+      title: "Tehnologii noi",
       desc: "Here you can add the next benefit point.",
       icon: <ChartBarSquareIcon />,
     },
     {
-      title: "Drive customer retention",
+      title: "Seminarii interesante",
       desc: "This will be your last bullet point in this section.",
       icon: <CursorArrowRaysIcon />,
     },
@@ -34,23 +34,33 @@ const benefitOne = {
 };
 
 const benefitTwo = {
-  title: "Offer more benefits here",
-  desc: "You can use this same layout with a flip image to highlight your rest of the benefits of your product. It can also contain an image or Illustration as above section along with some bullet points.",
+  title: "Ateliere",
+  desc: "Vino la workshop-urile noastre ca sa inveti ceva interesant",
   image: benefitTwoImg,
   bullets: [
     {
-      title: "Mobile Responsive Template",
-      desc: "Nextly is designed as a mobile first responsive template.",
+      title: "Mobile Development",
+      desc: "implementarea unei aplicații de mobil în care se are în vedere înțelegerea conceptelor de layout și media, acomodarea cu limbajul de programare Dart (framework Flutter) și extragerea de conținut din internet folosind un API extern",
       icon: <DevicePhoneMobileIcon />,
     },
     {
-      title: "Powered by Next.js & TailwindCSS",
-      desc: "This template is powered by latest technologies and tools.",
+      title: "Introducere în programare",
+      desc: "acesta va fi un workshop destinat începătorilor, cu scopul înțelegerii noțiunilor de bază din programare prin acomodarea cu linia de comandă, limbajul Python și versionarea Git",
       icon: <AdjustmentsHorizontalIcon />,
     },
     {
-      title: "Dark & Light Mode",
-      desc: "Nextly comes with a zero-config light & dark mode. ",
+      title: "Front-end Development",
+      desc: "crearea unei aplicații Web folosind framework-ul React împreună cu un API extern",
+      icon: <SunIcon />,
+    },
+    {
+      title: "Sisteme embedded",
+      desc: "cunoasterea principiilor de bază din electronică și programare prin creerea unor aplicații sugestive cu ajutorul celor mai uzuali senzori și actuatoare. Workshopul vizează în final implementarea controlului unei mașini utilizând mișcarea mâinii",
+      icon: <SunIcon />,
+    },
+    {
+      title: "Hacking 101 with Burp",
+      desc: "workshopul te va introduce în domeniul securității informatice, oferindu-ți cunoștințe și instrumente pentru identificarea și exploatarea vulnerabilităților aplicațiilor web. Veți învăța tehnici de testare a securității și cum sa utilizezi Burp Suite pentru a evalua și îmbunătăți securitatea aplicațiilor.",
       icon: <SunIcon />,
     },
   ],

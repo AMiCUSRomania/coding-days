@@ -43,14 +43,12 @@ const Home = () => {
       <Video />
       <SectionTitle
         pretitle="Testimonials"
-        title="Here's what our customers said">
-        Testimonails is a great way to increase the brand trust and awareness.
-        Use this section to highlight your popular customers.
+        title="Ce zic participantii?">
+        Cateva pareri de la cei care au participat la editiile trecute de AMiCUS Coding Days
       </SectionTitle>
       <Testimonials />
-      <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
-        Answer your customers possible questions here, it will increase the
-        conversion rate as well as support or chat requests.
+      <SectionTitle pretitle="FAQ" title="Intrebari puse frecvent">
+        Aici poti gasi raspunsul la posibilele intrebari pe care le ai
       </SectionTitle>
       <Faq />
       <Cta />
